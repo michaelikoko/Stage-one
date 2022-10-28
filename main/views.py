@@ -5,9 +5,8 @@ from rest_framework.response import Response
 
 class MainView(APIView):
     """The view for the only API endpoint that returns a JSON response containing an object."""
-    
+
     def get(self, request):
-        print("hey")
         return Response(
             { 
                 "slackUsername": "michael_ikoko", 
