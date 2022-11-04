@@ -67,6 +67,7 @@ class MainView(APIView):
                 "bio": "I am Michael Ikoko. I am a student and I am currently learing Backend web development." 
             }
         )
+        return response 
 
     def post(self, request):
         data = request.data
