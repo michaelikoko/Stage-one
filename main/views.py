@@ -59,7 +59,7 @@ class MainView(APIView):
     """The view for the only API endpoint that returns a JSON response containing an object."""
 
     def get(self, request):
-        return Response(
+        response = Response(
             { 
                 "slackUsername": "michael_ikoko", 
                 "backend": True, 
@@ -67,6 +67,7 @@ class MainView(APIView):
                 "bio": "I am Michael Ikoko. I am a student and I am currently learing Backend web development." 
             }
         )
+<<<<<<< HEAD
 
     def post(self, request):
         data = request.data
@@ -129,3 +130,7 @@ class MainView(APIView):
                 "operation_type": operation_type
             }
         )
+=======
+        response["Access-Control-Allow-Origin"] = "*"
+        return response
+>>>>>>> cb3c3b7a8eae61d0dacd62d6805b03b4c934cca9
